@@ -8,7 +8,7 @@ const {klona} = require('klona');
 const validVc = require('./validVc.json');
 
 // copies a validVc and adds an id.
-export const createRequestBody = ({issuer, vc = validVc}) => {
+const createRequestBody = ({issuer, vc = validVc}) => {
   const {issuer: {id, options}} = issuer;
   const credential = klona(vc);
   credential.id = `urn:uuid:${uuidv4()}`;
@@ -18,3 +18,5 @@ export const createRequestBody = ({issuer, vc = validVc}) => {
     options
   };
 };
+
+module.exports = {createRequestBody};

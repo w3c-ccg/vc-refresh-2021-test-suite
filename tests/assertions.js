@@ -7,6 +7,11 @@ const chai = require('chai');
 
 const should = chai.should();
 
-export const shouldHaveProperty({refreshService, property}) => {
-  should.exist(refreshService[property], `Expected refreshService to have property ${property}`);
-}
+const shouldHaveProperty = ({refreshService, property}) => {
+  should.exist(
+    refreshService[property],
+    `Expected refreshService to have property ${property}`
+  );
+};
+
+module.exports = {shouldHaveProperty};
