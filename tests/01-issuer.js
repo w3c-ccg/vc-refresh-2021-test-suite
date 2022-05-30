@@ -12,9 +12,8 @@ const should = chai.should();
 const tag = 'Vc-Refresh';
 const {match, nonMatch} = filterByTag({issuerTags: [tag]});
 
-
-describe('Issuer Tests', function () {
-const summaries = new Set();
+describe('Issuer Tests', function() {
+  const summaries = new Set();
   this.summary = summaries;
   const reportData = [];
   // this will tell the report
@@ -43,20 +42,20 @@ const summaries = new Set();
         should.exist(issuedVc, 'expected a Vc to be issued.');
         should.exist(issuedVc.refreshService, 'expected Vc to have property refreshService.');
         issuedVc.refreshService.should.be.an('object', 'expected vc.refreshService to be an object.');
-      })
+      });
       it('refreshService MUST contain type', function() {
         shouldHaveProperty({refreshService, property: 'type'});
-      })
+      });
       it('`refreshService.type` MUST be either MediatedRefresh2021 or UnmediatedRefresh2021', function() {
         const {type = ''} = refreshService.
-        type.should.be.oneOf(
-          ['MediatedRefresh2021','UnmediatedRefresh2021'],
-          'Expected refreshService.type to be either MediatedRefresh2021 or UnmediatedRefresh2021');
-      })
+          type.should.be.oneOf(
+            ['MediatedRefresh2021', 'UnmediatedRefresh2021'],
+            'Expected refreshService.type to be either MediatedRefresh2021 or UnmediatedRefresh2021');
+      });
       it('refreshService MUST contain url', function() {
         shouldHaveProperty({refreshService, property: 'url'});
-      })
+      });
 
-    })
+    });
   }
-})
+});
