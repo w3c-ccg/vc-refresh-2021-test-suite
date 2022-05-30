@@ -6,6 +6,7 @@
 const chai = require('chai');
 const {filterByTag} = require('vc-api-test-suite-implementations');
 const {shouldHaveProperty} = require('./assertions');
+const {createRequestBody} = require('./helpers');
 
 const should = chai.should();
 // only tests implementations that's issuer supports Vc-Refresh
@@ -40,17 +41,25 @@ describe('Issuer Tests', function() {
       });
       it('MUST have property `refreshService`', function() {
         should.exist(issuedVc, 'expected a Vc to be issued.');
-        should.exist(issuedVc.refreshService, 'expected Vc to have property refreshService.');
-        issuedVc.refreshService.should.be.an('object', 'expected vc.refreshService to be an object.');
+        should.exist(
+          issuedVc.refreshService,
+          'expected Vc to have property refreshService.'
+        );
+        issuedVc.refreshService.should.be.an(
+          'object',
+          'expected vc.refreshService to be an object.'
+        );
       });
       it('refreshService MUST contain type', function() {
         shouldHaveProperty({refreshService, property: 'type'});
       });
-      it('`refreshService.type` MUST be either MediatedRefresh2021 or UnmediatedRefresh2021', function() {
-        const {type = ''} = refreshService.
-          type.should.be.oneOf(
-            ['MediatedRefresh2021', 'UnmediatedRefresh2021'],
-            'Expected refreshService.type to be either MediatedRefresh2021 or UnmediatedRefresh2021');
+      it('`refreshService.type` MUST be either MediatedRefresh2021' +
+        ' or UnmediatedRefresh2021', function() {
+        const {type = ''} = refreshService;
+        type.should.be.oneOf(
+          ['MediatedRefresh2021', 'UnmediatedRefresh2021'],
+          'Expected refreshService.type to be either MediatedRefresh2021' +
+          ' or UnmediatedRefresh2021');
       });
       it('refreshService MUST contain url', function() {
         shouldHaveProperty({refreshService, property: 'url'});
