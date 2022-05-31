@@ -20,10 +20,12 @@
     "url": "https://digitalbazaar.com/"
   },
   "dependencies": {
-    "@digitalbazaar/mocha-w3c-interop-reporter": "^1.1.0",
+    "@digitalbazaar/mocha-w3c-interop-reporter": "github:digitalbazaar/mocha-w3c-interop-reporter",
     "chai": "^4.3.6",
+    "context-template": "github:digitalbazaar/vc-refresh-2021-context#initial",
     "klona": "^2.0.5",
     "mocha": "^10.0.0",
+    "uuid": "^8.3.2",
     "vc-api-test-suite-implementations": "github:w3c-ccg/vc-api-test-suite-implementations"
   },
   "devDependencies": {

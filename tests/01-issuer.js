@@ -50,6 +50,9 @@ describe('Issuer Tests', function() {
           'expected vc.refreshService to be an object.'
         );
       });
+      it('`refreshService` MUST contain url', function() {
+        shouldHaveProperty({refreshService, property: 'url'});
+      });
       it('refreshService MUST contain type', function() {
         shouldHaveProperty({refreshService, property: 'type'});
       });
@@ -61,10 +64,6 @@ describe('Issuer Tests', function() {
           'Expected refreshService.type to be either MediatedRefresh2021' +
           ' or UnmediatedRefresh2021');
       });
-      it('refreshService MUST contain url', function() {
-        shouldHaveProperty({refreshService, property: 'url'});
-      });
-
     });
   }
 });
