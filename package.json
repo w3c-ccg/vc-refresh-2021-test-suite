@@ -22,11 +22,11 @@
   "dependencies": {
     "@digitalbazaar/mocha-w3c-interop-reporter": "github:digitalbazaar/mocha-w3c-interop-reporter",
     "chai": "^4.3.6",
-    "context-template": "github:digitalbazaar/vc-refresh-2021-context#initial",
     "klona": "^2.0.5",
     "mocha": "^10.0.0",
     "uuid": "^8.3.2",
-    "vc-api-test-suite-implementations": "github:w3c-ccg/vc-api-test-suite-implementations"
+    "vc-api-test-suite-implementations": "github:w3c-ccg/vc-api-test-suite-implementations",
+    "vc-refresh-2021-context": "github:digitalbazaar/vc-refresh-2021-context#initial"
   },
   "devDependencies": {
     "eslint": "^8.16.0",
