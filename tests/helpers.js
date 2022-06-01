@@ -5,7 +5,8 @@
 
 const {v4: uuidv4} = require('uuid');
 const {klona} = require('klona');
-const validVc = require('./validVc.json');
+const validVc = require('./vcs/validVc.json');
+const verifierVc = require('./vcs/verifierVc.json');
 
 // copies a validVc and adds an id.
 const createRequestBody = ({issuer, vc = validVc}) => {
