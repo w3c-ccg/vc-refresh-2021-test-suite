@@ -1,0 +1,28 @@
+{
+  "name": "credentials-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@digitalbazaar/did-method-key": "^3.0.0",
+    "@digitalbazaar/vc": "^2.1.0",
+    "@digitalcredentials/did-context": "^1.0.0",
+    "base58-universal": "^2.0.0",
+    "bnid": "^3.0.0",
+    "ed25519-signature-2018-context": "^1.1.0",
+    "ed25519-signature-2020-context": "^1.1.0",
+    "jsonld-document-loader": "^1.2.1",
+    "klona": "^2.0.5",
+    "vc-refresh-2021-context": "github:digitalbazaar/vc-refresh-2021-context#initial"
+  },
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-config-digitalbazaar": "^3.0.0"
+  }
+}
