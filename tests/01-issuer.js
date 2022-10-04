@@ -14,8 +14,6 @@ const tag = 'Vc-Refresh';
 const {match, nonMatch} = filterByTag({issuerTags: [tag]});
 
 describe('Issuer Tests', function() {
-  const summaries = new Set();
-  this.summary = summaries;
   const reportData = [];
   // this will tell the report
   // to make an interop matrix with this suite

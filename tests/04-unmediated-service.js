@@ -10,3 +10,6 @@ const should = chai.should();
 // only tests implementations that's issuer supports Vc-Refresh
 const tag = 'Vc-Refresh';
 
+describe('UnmediatedService2021 Refresh Server', function() {
+
+});
